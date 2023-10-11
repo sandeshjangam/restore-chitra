@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Head } from "@inertiajs/react";
+import { Link, Head } from "@inertiajs/react";
 
 import HeaderFooterLayout from "@/Layouts/Authenticated/HeaderFooterLayout";
 
@@ -96,9 +96,10 @@ export default function RestoreChitra(props) {
                     <div className="flex w-full max-w-2xl items-center mt-12 mx-auto">
                         <div className="flex items-center justify-center w-full h-48 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
                             <div className="max-w-sm text-base">
-                                    You have exhausted your available generations for
-                                    today. Your <b>{images_limit} free generations</b>{" "}
-                                    will be renewed in <b>{time_to_reset}</b>.
+                                You have exhausted your available generations
+                                for today. Your{" "}
+                                <b>{images_limit} free generations</b> will be
+                                renewed in <b>{time_to_reset}</b>.
                             </div>
                         </div>
                     </div>
@@ -202,14 +203,11 @@ export default function RestoreChitra(props) {
             {/* Action Buttons */}
             {userImage && restoredImage && (
                 <div className="flex space-x-4 justify-center mt-16">
-                    <Button
-                        onClick={() => {
-                            setUserImage(null);
-                            setRestoredImage(null);
-                        }}
-                    >
-                        <Camera className="mr-2 h-4 w-4" />
-                        Generate New Photo
+                    <Button asChild>
+                        <Link href="/restore-chitra">
+                            <Camera className="mr-2 h-4 w-4" />
+                            Generate New Photo
+                        </Link>
                     </Button>
                     <Button
                         onClick={() => {
