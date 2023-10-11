@@ -173,14 +173,15 @@ class ImageController extends Controller
             ])->get($endpointUrl);
 
             $jsonFinalResponse = $finalResponse->json();
+            $status = $jsonFinalResponse['status'];
 
-            if ($jsonFinalResponse['status'] === 'succeeded') {
+            if ($status === 'succeeded') {
                 $restoredImage = $jsonFinalResponse['output'];
-            } elseif ($jsonFinalResponse['status'] === 'failed') {
+            } elseif ($status === 'failed') {
                 break;
+            } else {
+                sleep(1);
             }
-
-            sleep(1);
         }
 
         if (! $restoredImage) {
