@@ -7,7 +7,7 @@
 
 ## About the project
 
-I noticed that there is a significant surge in AI applications. Many developers are using NextJS and a few 3rd-party APIs to create AI applications.
+I noticed that there is a significant surge in AI applications build by NextJS & 3rd-party APIs. No doubt, NextJS is a great framework and developers love it. But,
 
 ***I thought, why not Laravel & React?***
 
