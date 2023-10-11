@@ -42,4 +42,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get the socialite users that belong to this user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\SocialiteUser>
+     */
+    public function socialiteUsers()
+    {
+        return $this->hasMany(SocialiteUser::class);
+    }
+
+    /**
+     * Get the image usages that belong to this user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\UserUsage>
+     */
+    public function usages()
+    {
+        return $this->hasMany(UserUsage::class);
+    }
 }
