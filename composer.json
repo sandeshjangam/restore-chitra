@@ -11,7 +11,9 @@
         "laravel/breeze": "^1.25",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
+        "laravel/socialite": "^5.9",
         "laravel/tinker": "^2.8",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
@@ -38,6 +40,11 @@
         }
     },
     "scripts": {
+        "lint": "./vendor/bin/duster lint",
+        "lint:fix": "./vendor/bin/duster fix",
+        "lint:dirty": "./vendor/bin/duster lint --dirty",
+        "lint:dirty:fix": "./vendor/bin/duster fix --dirty",
+        "lint:stan": "./vendor/bin/phpstan analyse --memory-limit=512M",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"

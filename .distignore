@@ -1,0 +1,15 @@
+.git
+.gitignore
+.github
+.gitmodules
+.distignore
+.env
+*.md
+node_modules
+vendor
+package.json
+package-lock.json
+phpcs.xml
+storage/logs/
+storage/framework/sessions/
+storage/keys/
