@@ -178,9 +178,9 @@ class ImageController extends Controller
                 $restoredImage = $jsonFinalResponse['output'];
             } elseif ($jsonFinalResponse['status'] === 'failed') {
                 break;
-            } else {
-                sleep(1);
             }
+
+            sleep(1);
         }
 
         if (! $restoredImage) {
