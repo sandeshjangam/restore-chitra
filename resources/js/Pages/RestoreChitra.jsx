@@ -86,21 +86,23 @@ export default function RestoreChitra(props) {
                     power of AI. Supported formats: jpeg, jpg, png.
                 </p>
 
-                <p className="mx-auto max-w-lg mt-6 text-lg leading-8 text-gray-600">
-                    {images_remaining > 0 && (
-                        <>
-                            You have <b>{images_remaining} free generations</b>{" "}
-                            remaining for today.
-                        </>
-                    )}
-                    {images_used >= images_limit && (
-                        <>
-                            Your 5 free generations will renew in{" "}
-                            <b>{time_to_reset}</b>.
-                        </>
-                    )}
-                </p>
-                <p className="mx-auto max-w-lg mt-6 text-lg leading-8 text-gray-600"></p>
+                {images_remaining > 0 && (
+                    <p className="mx-auto max-w-lg mt-6 text-lg leading-8 text-gray-600">
+                        You have <b>{images_remaining} free generations</b>{" "}
+                        remaining for today.
+                    </p>
+                )}
+                {images_used >= images_limit && (
+                    <div className="flex w-full max-w-2xl items-center mt-12 mx-auto">
+                        <div className="flex items-center justify-center w-full h-48 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
+                            <div className="max-w-sm text-base">
+                                    You have exhausted your available generations for
+                                    today. Your <b>{images_limit} free generations</b>{" "}
+                                    will be renewed in <b>{time_to_reset}</b>.
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Error */}
@@ -121,7 +123,7 @@ export default function RestoreChitra(props) {
             )}
 
             {/* Upload Image */}
-            {!userImage && (
+            {!userImage && images_remaining > 0 && (
                 <>
                     <div className="mt-16 upload-image-wrapper">
                         <UploadImage
