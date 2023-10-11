@@ -14,11 +14,6 @@ export default function Header({ user }) {
                         <h1 class="sm:text-2xl text-2xl font-bold">
                             RestoreChitra AI
                         </h1>
-                        {/* <img
-                            className="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                            alt=""
-                        /> */}
                     </a>
                 </div>
 

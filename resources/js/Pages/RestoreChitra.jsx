@@ -116,8 +116,6 @@ export default function RestoreChitra(props) {
                                 <AlertDescription>{error}</AlertDescription>
                             </Alert>
                         </div>
-                        {/* <div className="flex justify-center w-full h-48 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
-                        </div> */}
                     </div>
                 </div>
             )}
