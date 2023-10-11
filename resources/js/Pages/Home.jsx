@@ -30,16 +30,18 @@ export default function Home({ auth }) {
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                                 <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                                    An open-source photo restoration tool.
-                                    {/* {" "}
-                                    <a href="/how-it-works" class="font-semibold">
+                                    An open-source photo restoration tool.{" "}
+                                    <a
+                                        href="https://github.com/sandeshjangam/restore-chitra"
+                                        class="font-semibold"
+                                    >
                                         <span
                                             class="absolute inset-0"
                                             aria-hidden="true"
                                         ></span>
                                         Read more{" "}
                                         <span aria-hidden="true">→</span>
-                                    </a> */}
+                                    </a>
                                 </div>
                             </div>
                             <div className="mx-auto max-w-5xl text-center">
